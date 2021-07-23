@@ -37,6 +37,11 @@ body {
   letter-spacing: 0.03em;
 }
 
+.section { 
+  width: 1600px;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 /* "container" */
 
 .container {
@@ -48,7 +53,8 @@ body {
 }
 
 /* header  */
-.page-header {
+.section.page-header { 
+  padding: 0;
   border-bottom: 1px solid #ececec;
 }
 .main-nav {
@@ -118,7 +124,7 @@ body {
 
 .contacts-list {
   display: flex;
-  margin-left: auto;
+  margin-left: 305px;
 }
 
 .contacts-list .item + .item {
@@ -144,10 +150,26 @@ body {
 
 /* hero */
 
-.hero {
-  background-color: #2f303a;
+.section.hero-section { 
+
+  width: 1600px;
+  height: 600px;
   padding: 200px 0;
   text-align: center;
+  
+
+  background-color: #2f303a;
+  background-image: linear-gradient( 
+  to right,
+  rgba(47, 48, 58, 0.4),
+  rgba(47, 48, 58, 0.4) 
+  ), 
+  url("../images/herobackground.jpg");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
 }
 
 .hero-title {
@@ -159,11 +181,13 @@ body {
   line-height: 1.36;
 
   letter-spacing: 0.06em;
+  text-align: center;
   text-transform: uppercase;
 
   width: 696px;
   margin-bottom: 0px;
-  margin-left: 252px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .button.hero {
@@ -195,10 +219,6 @@ body {
 
 /* section */
 
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
 
 .team-title,
 .advantage-title,
