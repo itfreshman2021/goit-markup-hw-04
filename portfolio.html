@@ -32,9 +32,21 @@
           </nav>
           <ul class="contacts-list list">
             <li class="item">
-              <a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a>
+              <a href="mailto:info@devstudio.com" class="link">
+                <svg class="contact-icon" width="16px" height="12px">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                <span class="contact-text">info@devstudio.com</span>
+              </a>
             </li>
-            <li class="item"><a href="tel:+380961111111" class="link">+38 096 111 11 11</a></li>
+            <li class="item">
+              <a href="tel:+380961111111" class="link">
+                <svg class="contact-icon" width="10px" height="16px">
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+                <span class="contact-text">+38 096 111 11 11</span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -194,17 +206,43 @@
 
     <footer class="section address">
       <div class="container">
-        <a href="/" class="logo-footer"><span class="accent">Web</span>Studio</a>
+        <div class="flex-footer">
+          <div class="address-date">
+            <a href="/" class="logo-footer"><span class="accent">Web</span>Studio</a>
 
-        <address>
-          <a href="https://goo.gl/maps/RCxTANofW1ampnam6" class="map"
-            >г. Киев, пр-т Леси Украинки, 26</a
-          >
+            <address>
+              <a href="https://goo.gl/maps/RCxTANofW1ampnam6" class="map"
+                >г. Киев, пр-т Леси Украинки, 26</a>
 
-          <a href="mailto:info@example.com" class="contact date">info@example.com</a>
+              <a href="mailto:info@example.com" class="contact date">info@example.com</a>
 
-          <a href="tel:+380991111111" class="contact date">+38 099 111 11 11</a>
-        </address>
+              <a href="tel:+380991111111" class="contact date">+38 099 111 11 11</a>
+            </address>
+          </div>
+          <div class="social-linklistfooter">
+            <b class="join">присоединяйтесь</b>
+            <a href="" class="social-linkfooter" aria-label="Линк instagram">
+              <svg class="social-iconfooter" width="20px" height="20px">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+            <a href="" class="social-linkfooter" aria-label="Линк twitter">
+              <svg class="social-iconfooter" width="20px" height="20px">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+            <a href="" class="social-linkfooter" aria-label="Линк facebook">
+              <svg class="social-iconfooter" width="20px" height="20px">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+            <a href="" class="social-linkfooter" aria-label="Линк linkedin">
+              <svg class="social-iconfooter" width="20px" height="20px">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
   </body>
