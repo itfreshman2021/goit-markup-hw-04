@@ -27,6 +27,9 @@ html {
   --accent-color: #2196f3;
   --primary-bg-color: #f5f4fa;
   --white-color: #ffffff;
+  --second-bg-color: #2F303A;
+  --icon-color: #AFB1B8;
+  --black-color: #000;
 }
 
 body {
@@ -38,7 +41,9 @@ body {
 }
 
 .section { 
-  width: 1600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -73,10 +78,10 @@ body {
   padding-bottom: 25px;
   width: 145px;
 
-  color: #000;
+  color: var(--black-color);
 }
 .accent {
-  color: #2196f3;
+  color: var(--accent-color);
 }
 .logo {
   font-family: Raleway, sans-serif;
@@ -156,19 +161,20 @@ body {
 }
 .contact-icon { 
   fill: currentColor;
+  
 }
 
 /* hero */
 
 .section.hero-section { 
 
-  width: 1600px;
-  height: 600px;
+  max-width: 1600px;
+  
   padding: 200px 0;
   text-align: center;
   
 
-  background-color: #2f303a;
+  background-color: var(--second-bg-color);
   background-image: linear-gradient( 
   to right,
   rgba(47, 48, 58, 0.4),
@@ -379,7 +385,7 @@ body {
   text-decoration: none;
   border: none;
 
-  color: #AFB1B8;
+  color: var(--icon-color);
 
   width: 44px;
   height: 44px;
@@ -418,10 +424,12 @@ body {
   width: 170px;
   height: 92px;
 
-  color: #AFB1B8;
-  border: 1px solid #AFB1B8;
+  color: var(--icon-color);
+  border: 1px solid var(--icon-color);
   border-radius: 4px;
   padding: 15px 31px;
+
+  cursor: pointer;
 
 }
 
@@ -437,14 +445,17 @@ body {
 }
 
 .client-link {  
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   border: none;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
 
   color: currentColor;
 
-  width: 106px;
-  height: 60px;
 }
 
 .client-link:hover,
@@ -455,29 +466,11 @@ body {
   fill: currentColor;
 }
 
-.client-link.yaco { 
-  padding: 7px 33px 6px 32px;
-}
-.client-link.tagline { 
-  padding: 3px 33px 5px;
-}
-.client-link.company { 
-  padding: 8.7px 32.86px 10.12px 29.68px;
-}
-.client-link.foster { 
-  padding: 8.7px 10.56px 10.68px 11px;
-}
-.client-link.brand { 
-  padding: 6.77px 21.46px 7.8px 22px;
-} 
-.client-link.brand { 
-  padding: 6.77px 6.21px 9.31px 6px;
-} 
 
 /* футер */
 
 .section.address {
-  background-color: #2f303a;
+  background-color: var(--second-bg-color);
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -617,11 +610,14 @@ address {
 .button.portfolio:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+    color: var(--white-color);
+  background-color: var(--accent-color);
 }
 
-.button-list .item:hover > .button,
-.button-list .item:focus > .button {
-  color: var(--white-color);
+.button.portfolio.current {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+    color: var(--white-color);
   background-color: var(--accent-color);
 }
 
@@ -639,16 +635,18 @@ address {
   margin-top: 30px;
   flex-basis: calc((100% - 90px) / 3);
 }
-.examples-list .item:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-   0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
 
 .project-link {
   display: block;
   text-decoration: none;
 }
+.project-link:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+   0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+
 
 /* прибираємо зазор 4px в img */
 .project-image {
